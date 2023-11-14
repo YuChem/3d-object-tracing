@@ -7,15 +7,44 @@
   <body>
 <!-- https://cdn.jsdelivr.net/gh/hiukim/mind-ar-js@1.2.2/examples/image-tracking/assets/card-example/card.mind -->
     <a-scene 
-      mindar-image="imageTargetSrc: 6diamonds.mind;" 
+      mindar-image="imageTargetSrc: 6diamonds-minions.mind;" 
       vr-mode-ui="enabled: false" 
       device-orientation-permission-ui="enabled: false"
       arjs="trackingMethod: best; sourceType: webcam;"
     >
       <a-camera position="0 0 0" fov="135" look-controls="enabled: true"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
-        <a-plane color="blue" opaciy="0.5" position="0 0 0" height="0.552" width="1" rotation="0 0 0"></a-plane>
+        <a-plane color="lightblue" opaciy="0.7" position="0 0 0" height="1.5" width="1" rotation="0 0 0">
+        </a-plane>
+        <a-text 
+            value="Minions" 
+            color="black" 
+            align="center" 
+            scale="1 1 1" text="">
+        </a-text>
       </a-entity>
+
+      <a-entity mindar-image-target="targetIndex: 1">
+        <a-plane 
+          color="yellow" 
+          rotation="0 0 0" 
+          position="0 0 0" 
+          width="1"
+          height="1,5" 
+          opacity="0.9" 
+          geometry="">
+        </a-plane>
+        <a-text 
+          value="6 of diamonds" 
+          color="blue" 
+          rotation="0 0 0" 
+          align="center" 
+          scale="1 1 1" text="">
+        </a-text>
+      </a-entity>
+
+
+
     </a-scene>
   </body>
 </html>
